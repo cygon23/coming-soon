@@ -4,6 +4,17 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+.circular-logo {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fa8d27; /* Optional border, adjust color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -63,7 +74,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  background: url(../img/bg1.jpg) top center no-repeat;
+  background: url(../img/pexels-hilaryh-38012.jpg) top center no-repeat;
   background-size: cover;
   position: relative;
 }
