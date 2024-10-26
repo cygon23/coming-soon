@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Coming soon</title>
+  <title>Ishitechnologies</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -52,8 +52,8 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section transparent-background">
+    
+    <!-- <section id="hero" class="hero section transparent-background">
 
       <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
@@ -101,8 +101,75 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section> -->
 
+    
+    
+    <!-- Hero Section -->
+<section id="hero" class="hero section transparent-background">
+  <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Coming Soon</h2>
+        <p>We are still working on our application. Stay tuned for updates!</p>
+      </div>
+
+      <div class="countdown d-flex justify-content-center" data-count="2025/12/3">
+        <div>
+          <h3 class="count-days">20</h3>
+          <h4>Days</h4>
+        </div>
+        <div>
+          <h3 class="count-hours">3</h3>
+          <h4>Hours</h4>
+        </div>
+        <div>
+          <h3 class="count-minutes">49</h3>
+          <h4>Minutes</h4>
+        </div>
+        <div>
+          <h3 class="count-seconds">41</h3>
+          <h4>Seconds</h4>
+        </div>
+      </div>
+
+      <div class="col-lg-5 hero-newsletter mt-4">
+        <p>Subscribe to our Google Group to get access to download the App!</p>
+        <a href="https://groups.google.com/g/ishiapp" target="_blank" class="btn btn-primary clour mb-3">Join Now</a>
+        <div class="mt-2">
+          <a href="#" id="downloadLink">
+            <img src="assets/img/playstore.png" alt="Download on the Play Store" style="width: 150px; height: auto;">
+          </a>
+        </div>
+        
+        
+        <!-- Modal Structure -->
+        <div id="notificationModal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>Please note that our app is still in maintenance mode. To get full access, make sure you have joined our Google group.</p>
+            <button id="joinGroupButton">Join Google Group</button>
+            <button id="allowDownloadButton">Download App</button>
+          </div>
+        </div>
+        
+        
+      </div>
+
+      <div class="social-links mt-4">
+        <a href="https://github.com/cygon23"><i class="bi bi-github"></i></a>
+        <a href="https://x.com/home"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61565957482853&is_tour_completed"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Hero Section -->
+
+    
+    
     <!-- About Section -->
 <section id="about" class="about section transparent-background">
 
@@ -240,7 +307,7 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        Designed by <a href="#">Ishi Technologies</a>
+        Designed by <a href="#">Ishi Technologies</a>  <span> <a href="policy.html" class="privacy"> Our  privacy policy</a></span>
       </div>
     </div>
   
@@ -259,6 +326,46 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+  // Check if the user has joined the Google group (replace this with your actual check)
+let hasJoinedGroup = false; // Change this based on your condition
+
+document.getElementById("downloadLink").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent default link action
+
+  // Show the notification modal
+  document.getElementById("notificationModal").style.display = "block";
+
+  // You can show the download button regardless of group membership
+  document.getElementById("allowDownloadButton").style.display = "inline-block";
+});
+
+// Add event listener to the join group button
+document.getElementById("joinGroupButton").addEventListener("click", function() {
+  // Logic to join the group, e.g., redirecting to a Google Group link
+  window.open("https://groups.google.com/g/YOUR_GROUP_NAME", "_blank");
+});
+
+// Add event listener to the allow download button
+document.getElementById("allowDownloadButton").addEventListener("click", function() {
+  window.open("https://play.google.com/store/apps/details?id=com.nane.nane", "_blank");
+});
+
+// Add event listener to close the modal
+document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("notificationModal").style.display = "none";
+});
+
+// Close the modal if the user clicks outside of the modal
+window.addEventListener("click", function(event) {
+  const modal = document.getElementById("notificationModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+</script>
 
 </body>
 
